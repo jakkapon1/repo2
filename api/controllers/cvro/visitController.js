@@ -3,7 +3,6 @@ const mongoose = require("mongoose")
 const jsesc = require('jsesc');
 
 
-mongoose.connect('mongodb://admin:admin@localhost:27017/admin',{dbName:'census',useNewUrlParser: true});
 
 var Log = require.main.require('./api/library/log');
 

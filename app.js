@@ -4,7 +4,6 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
 
-
 const patientRoutes = require('./api/routes/cvro/patient');
 const visitRoutes = require('./api/routes/cvro/visit');
 const orderRoutes = require('./api/routes/cvro/order');
@@ -17,6 +16,7 @@ const consultRoutes = require('./api/routes/cvro/consult');
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
 
 
 
