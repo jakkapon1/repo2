@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 var mhost = process.env.MONGOHOST;
 
-mongoose.connect('mongodb://localhost:27017/admin',{user:process.env.MONGOUSER,pass:process.env.MONGOPASSWORD,dbName:process.env.MONGODATABASE,useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/admin',{user:'cvro',pass:'maria',dbName:'census',useNewUrlParser: true});
 const Log = require.main.require('./api/models/log');
 
 
