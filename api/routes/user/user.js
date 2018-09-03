@@ -6,14 +6,7 @@ const jwt = require('jsonwebtoken');
 
 const User = require.main.require('./api/models/user');
 
-const options = {
-	useNewUrlParser: true,
-	user: process.env.MONGOUSER,
-	pass: process.env.MONGOPASSWORD,
-	dbName: process.env.MONGODATABASE
-};
 
-mongoose.connect('mongodb://localhost:27017/admin',options);
 
 router.post('/signup', (req, res, next) => {
 	User.find({email: req.body.email})

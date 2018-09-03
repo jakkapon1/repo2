@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const mongoose = require("mongoose");
+const { Pool } = require('pg')
 
 
 const patientRoutes = require('./api/routes/cvro/patient');
@@ -17,7 +19,14 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+const options = {
+	useNewUrlParser: true,
+	user: 'cvro',
+	pass: 'maria',
+	dbName: 'census'
+};
 
+mongoose.connect('mongodb://localhost:27017/admin',options);
 
 
 app.use((req, res, next) => {
