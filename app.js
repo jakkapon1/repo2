@@ -21,9 +21,9 @@ app.use(bodyParser.json());
 
 const options = {
 	useNewUrlParser: true,
-	user: 'cvro',
-	pass: 'maria',
-	dbName: 'census'
+	user: 'xxx',
+	pass: 'xxx',
+	dbName: 'xxx'
 };
 
 mongoose.connect('mongodb://localhost:27017/admin',options);
